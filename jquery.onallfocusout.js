@@ -1,11 +1,11 @@
-$.fn.onAllFocusOut = function(selector, cb) {
+$.fn.onAllFocusOut = function(cb) {
     var $this = this,
         timeout;
 
-    $(selector).on('focusout', function(e) {
+    $(this.selector).on('focusout', function(e) {
         timeout = window.setTimeout(cb($this), 50);
     })
-    $(selector).on('focusin', function(e) {
+    $(this.selector).on('focusin', function(e) {
         window.clearTimeout(timeout);
     })
 
