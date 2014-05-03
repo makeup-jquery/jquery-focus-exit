@@ -1,11 +1,11 @@
-$.fn.onAllFocusOut = function(cb) {
+$.fn.onAllFocusOut = function(selector, cb) {
     var $this = this,
         timeout;
 
-    $('.tooltip-interactive').on('focusout', function(e) {
+    $(selector).on('focusout', function(e) {
         timeout = window.setTimeout(cb($this), 50);
     })
-    $('.tooltip-interactive').on('focusin', function(e) {
+    $(selector).on('focusin', function(e) {
         window.clearTimeout(timeout);
     })
 
