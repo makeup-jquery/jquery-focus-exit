@@ -1,13 +1,20 @@
-$.fn.onAllFocusOut = function(cb) {
-    var $this = this,
-        timeout;
+(function ( $ ) {
 
-    $(this.selector).on('focusout', function(e) {
-        timeout = window.setTimeout(cb($this), 50);
-    })
-    $(this.selector).on('focusin', function(e) {
-        window.clearTimeout(timeout);
-    })
+    $.fn.onAllFocusOut = function(cb) {
 
-    return this;
-};
+        return this.each(function() {
+
+            var $this = $(this),
+                timeout;
+
+            $(this).on('focusout', function(e) {
+                timeout = window.setTimeout(function(){cb($this);}, 50);
+            });
+
+            $(this).on('focusin', function(e) {
+                window.clearTimeout(timeout);
+            });
+        });
+    };
+
+}( jQuery ));
