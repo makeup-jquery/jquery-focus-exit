@@ -1,6 +1,6 @@
 (function ( $ ) {
 
-    $.fn.onAllFocusOut = function(cb) {
+    $.fn.onFocusLeave = function(cb) {
 
         return this.each(function() {
 
