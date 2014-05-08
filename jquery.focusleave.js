@@ -7,11 +7,11 @@
             var $this = $(this),
                 timeout;
 
-            $(this).on('focusout', function(e) {
+            $this.on('focusout', function(e) {
                 timeout = window.setTimeout(function(){cb($this);}, 50);
             });
 
-            $(this).on('focusin', function(e) {
+            $this.on('focusin', function(e) {
                 window.clearTimeout(timeout);
             });
         });
