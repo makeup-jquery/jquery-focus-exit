@@ -8,7 +8,8 @@
                 timeout;
 
             $this.on('focusout', function(e) {
-                timeout = window.setTimeout(function(){cb($this);}, 50);
+                var lastTarget = e.target;
+                timeout = window.setTimeout(function(){cb($this, $(lastTarget));}, 30);
             });
 
             $this.on('focusin', function(e) {
