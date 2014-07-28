@@ -1,5 +1,5 @@
 # jquery-focusleave
 
-The jQuery 'focusout' event fires when any child element loses keyboard focus, even if another child element immediately gains focus.
+The jQuery 'focusout' event fires when any child of a given element loses keyboard focus, even if another child immediately gains focus.
 
-The jQuery focusleave plugin detects when *all* keyboard focus has left a component.
+This jQuery focusleave plugin triggers a callback only when keyboard focus has completely left the given element.
