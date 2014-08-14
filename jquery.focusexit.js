@@ -1,6 +1,8 @@
 (function ( $ ) {
 
-    $.fn.onFocusLeave = function onFocusLeave(callback) {
+    $.fn.focusexit = function onFocusExit(callback, options) {
+
+        options = options || {};
 
         return this.each(function onEach() {
 
@@ -12,12 +14,18 @@
             $this.on('focusout', function onFocusOut(e) {
                 timeout = window.setTimeout(function onTimeout() {
                     callback.call($this, {"lostfocus": e.target, "gainedfocus": e.relatedTarget});
+
+                    if (options.doOnce === true) {
+                        $this.off('focusin');
+                    }
+
                 }, 10);
+
+                $this.one('focusin', function onFocusIn(e) {
+                    window.clearTimeout(timeout);
+                });
             });
 
-            $this.on('focusin', function onFocusIn(e) {
-                window.clearTimeout(timeout);
-            });
         });
     };
 
