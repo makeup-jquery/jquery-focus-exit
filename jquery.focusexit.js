@@ -1,14 +1,12 @@
 /**
-* focusexit.js
-* @author Ian McBurnie
-*
-* The jQuery 'focusout' event fires when any child of a given element loses
-* keyboard focus, even if another child immediately gains focus. This plugin
-* triggers a custom event only when keyboard focus has completely left the given
+* @function jquery.focusexit.js
+* @author Ian McBurnie <ianmcburnie@hotmail.com>
+* @desc Triggers event when keyboard focus has completely left the given
 * element. This type of behaviour is especially desirable for non-modal overlays.
+* @fires focusout - fires when any child of a given element loses
+* keyboard focus, even if another child immediately gains focus.
 */
-
-(function ( $ ) {
+(function ($, window, document, undefined) {
 
     $.fn.focusexit = function focusExit(options) {
 
@@ -39,4 +37,4 @@
         });
     };
 
-}( jQuery ));
+}(jQuery, window, document));
