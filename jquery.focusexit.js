@@ -1,40 +1,35 @@
 /**
 * @function jquery.focusexit.js
+* @version 0.0.3
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @desc Triggers event when keyboard focus has completely left the given
-* element. This type of behaviour is especially desirable for non-modal overlays.
-* @fires focusout - fires when any child of a given element loses
-* keyboard focus, even if another child immediately gains focus.
+* @desc Triggers event when keyboard focus has completely left the element.
+* @required event.relatedTarget - http://msdn.microsoft.com/en-us/library/ie/ff974881(v=vs.85).aspx
+* @fires {object} focusexit
+* @fires {string} focusexit.lostFocus
+* @fires {string} focusexit.gainedFocus
 */
 (function ($, window, document, undefined) {
 
-    $.fn.focusexit = function focusExit(options) {
-
-        options = options || {};
+    $.fn.focusExit = function focusExit() {
 
         return this.each(function onEach() {
 
             var $this = $(this),
                 timeout;
 
-            // event.relatedTarget is only supported in IE9+
-            // http://msdn.microsoft.com/en-us/library/ie/ff974881(v=vs.85).aspx
+            function onFocusIn() {
+                window.clearTimeout(timeout);
+            }
+
             $this.on('focusout', function onFocusOut(e) {
                 timeout = window.setTimeout(function onTimeout() {
-                    $this.trigger('focusexit', {"lostfocus": e.target, "gainedfocus": e.relatedTarget});
+                    $this.off('focusin', onFocusIn).trigger('focusexit', {"lostFocus": e.target, "gainedFocus": e.relatedTarget});
+                }, 100);
 
-                    if (options.doOnce === true) {
-                        $this.off('focusin');
-                    }
-
-                }, 10);
-
-                $this.one('focusin', function onFocusIn(e) {
-                    window.clearTimeout(timeout);
-                });
+                $this.one('focusin', onFocusIn);
             });
-
         });
+
     };
 
 }(jQuery, window, document));
