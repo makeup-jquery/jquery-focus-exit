@@ -6,8 +6,8 @@
     "start": "karma start --autoWatch true --singleRun false",
     "test": "karma start",
     "prepublish": "npm run build",
-    "lint": "jshint jquery.nextid.js > jshint.txt",
-    "minify": "jsmin -o jquery.nextid.min.js jquery.nextid.js",
+    "lint": "jshint jquery.focusexit.js > jshint.txt",
+    "minify": "jsmin -o jquery.focusexit.min.js jquery.focusexit.js",
     "clean": "rimraf test_reports *.min.js jshint.txt",
     "build": "npm run clean && npm run lint && npm test && npm run minify"
   },
