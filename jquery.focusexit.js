@@ -24,13 +24,13 @@
                     relatedTargetShim,
                     timeout;
 
-                function onElementFocusIn() {
+                var onElementFocusIn = function() {
                     window.clearTimeout(timeout);
-                }
+                };
 
-                function onDocumentFocusIn(e) {
+                var onDocumentFocusIn = function(e) {
                     relatedTargetShim = e.target;
-                }
+                };
 
                 // KeyboardEvent.relatedTarget is not supported in Firefox.
                 // So we manually listen to see where focus goes to in the doc.
@@ -52,7 +52,5 @@
                 });
             }
         });
-
     };
-
 }(jQuery, window, document));
