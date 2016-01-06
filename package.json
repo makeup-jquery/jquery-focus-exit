@@ -1,7 +1,7 @@
 {
   "name": "@ebay/jquery-focus-exit",
   "description": "Triggers 'focusexit' event when keyboard focus has completely left the element. This type of behaviour is especially desirable for non-modal overlays.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "start": "karma start --autoWatch true --singleRun false",
     "test": "karma start",
