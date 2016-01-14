@@ -1,6 +1,6 @@
 /**
 * @function jquery.focusexit.js
-* @version 0.0.7
+* @version 0.0.8
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc Triggers 'focusexit' event when keyboard focus has completely left the element.
 * @fires {object} focusexit
