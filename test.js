@@ -22,7 +22,7 @@ describe("jquery.focusexit.js", function() {
 
     it("should trigger focusexit when focus moves from element root to sibling", function(done) {
         // async assert
-        $testElement.on('focusexit', done);
+        $testElement.on('focusExit', done);
 
         // excecute
         $testElement.focusExit();
@@ -32,7 +32,7 @@ describe("jquery.focusexit.js", function() {
 
     it("should trigger when focus moves from element descendant to element sibling", function(done) {
         // async assert
-        $testElement.on('focusexit', done);
+        $testElement.on('focusExit', done);
 
         // excecute
         $testElement.focusExit();
@@ -46,7 +46,7 @@ describe("jquery.focusexit.js", function() {
 
         // execute
         $testElement.focusExit();
-        $testElement.on('focusexit', eventHandlers.onFocusExit);
+        $testElement.on('focusExit', eventHandlers.onFocusExit);
         $testElement.focus();
         $testElement.find('button').first().focus();
 

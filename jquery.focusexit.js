@@ -1,11 +1,11 @@
 /**
 * @function jquery.focusexit.js
-* @version 0.0.8
+* @version 0.1.0
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @desc Triggers 'focusexit' event when keyboard focus has completely left the element.
-* @fires {object} focusexit
-* @fires {string} focusexit.lostFocus - the descendant element that lost focus
-* @fires {string} focusexit.gainedFocus - the non-descendant element that gained focus
+* @desc Triggers 'focusExit' event when keyboard focus has completely left the element.
+* @fires {object} focusExit
+* @fires {string} focusExit.lostFocus - the descendant element that lost focus
+* @fires {string} focusExit.gainedFocus - the non-descendant element that gained focus
 */
 (function ($, window, document, undefined) {
 
@@ -42,7 +42,7 @@
                     timeout = window.setTimeout(function onTimeout() {
                         $(document).off('focusin', onDocumentFocusIn);
                         $this.off('focusin', onElementFocusIn);
-                        $this.trigger('focusexit', {
+                        $this.trigger('focusExit', {
                             "lostFocus": e.target,
                             "gainedFocus": e.relatedTarget || relatedTargetShim
                         });

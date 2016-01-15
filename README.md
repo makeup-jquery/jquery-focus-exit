@@ -5,7 +5,7 @@
     <a href='https://coveralls.io/github/ianmcburnie/jquery-focus-exit?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-focus-exit/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
 </p>
 
-Triggers 'focusexit' event when keyboard focus has completely left the element. This type of behaviour is especially desirable for non-modal overlays.
+Triggers 'focusExit' event when keyboard focus has completely left the element. This type of behaviour is especially desirable for non-modal overlays.
 
 JavaScript's native 'focusout' event fires when any descendant of a given element
 loses keyboard focus, even if another descendant immediately gains focus. This type
@@ -16,7 +16,7 @@ of behaviour is not desirable for non-modal overlays.
 $(collection).focusExit();
 
 // handle event
-$(collection).on('focusexit', function(e, data) {
+$(collection).on('focusExit', function(e, data) {
     console.log(data.lostFocus, data.gainedFocus);
 })
 ```
@@ -30,7 +30,7 @@ Please use the tilde range specifier in your package.json to pin to a fixed majo
 ## Install
 
 ```js
-npm install @ebay/jquery-focus-exit --save
+npm install @ebay/jquery-focus-exit
 ```
 
 The NPM package also includes a minified version of the plugin.
