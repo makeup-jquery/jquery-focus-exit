@@ -1,4 +1,4 @@
-# @ebay/jquery-focus-exit
+# jquery-focus-exit
 
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-focus-exit"><img src="https://api.travis-ci.org/ianmcburnie/jquery-focus-exit.svg?branch=master" alt="Build Status" /></a>
@@ -30,7 +30,7 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must 
 ## Install
 
 ```js
-npm install @ebay/jquery-focus-exit
+npm install jquery-focus-exit
 ```
 
 The NPM package also includes a minified version of the plugin.
