@@ -1,28 +1,28 @@
 /**
-* @function jquery.focusexit.js
-* @version 0.1.3
+* @file jQuery collection plugin that triggers 'focusExit' event when keyboard focus has completely left the element boundary
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @desc Triggers 'focusExit' event when keyboard focus has completely left the element.
-* @fires {object} focusExit
-* @fires {string} focusExit.lostFocus - the descendant element that lost focus
-* @fires {string} focusExit.gainedFocus - the non-descendant element that gained focus
+* @version 0.2.0
+* @requires jquery
 */
-(function ($, window, document, undefined) {
-
+(function($, window, document, undefined) {
     var pluginName = 'jquery-focus-exit';
 
+    /**
+    * jQuery collection plugin that triggers 'focusExit' event when keyboard focus has completely left the element boundary
+    *
+    * @method "jQuery.focusExit"
+    * @fires focusExit - when focus exits the element boundary
+    * @return {Object} chainable jQuery class
+    */
     $.fn.focusExit = function focusExit() {
-
         return this.each(function onEach() {
-
             // check plugin does not already exist
             if (!$.data(this, pluginName)) {
-
                 jQuery.data(this, pluginName, 'true');
 
-                var $this = $(this),
-                    relatedTargetShim,
-                    timeout;
+                var $this = $(this);
+                var relatedTargetShim;
+                var timeout;
 
                 var onElementFocusIn = function() {
                     window.clearTimeout(timeout);
@@ -43,8 +43,8 @@
                         $(document).off('focusin', onDocumentFocusIn);
                         $this.off('focusin', onElementFocusIn);
                         $this.trigger('focusExit', {
-                            "lostFocus": e.target,
-                            "gainedFocus": e.relatedTarget || relatedTargetShim
+                            lostFocus: e.target,
+                            gainedFocus: e.relatedTarget || relatedTargetShim
                         });
                     }, 100);
 
@@ -54,3 +54,17 @@
         });
     };
 }(jQuery, window, document));
+
+/**
+* The jQuery plugin namespace.
+* @external "jQuery.fn"
+* @see {@link http://learn.jquery.com/plugins/|jQuery Plugins}
+*/
+
+/**
+* focusExit event
+*
+* @event focusExit
+* @type {object}
+* @property {object} event - event object
+*/

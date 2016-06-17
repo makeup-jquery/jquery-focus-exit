@@ -17,7 +17,7 @@ node_modules
 test_reports
 
 # Lint output
-jshint.txt
+lint.txt
 
-# Minified JS
-*.min.js
+# JSDoc output
+jsdoc
