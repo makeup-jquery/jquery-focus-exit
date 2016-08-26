@@ -1,6 +1,6 @@
 describe("jquery.focusexit.js", function() {
 
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 750;
 
     var timeoutInterval = jasmine.DEFAULT_TIMEOUT_INTERVAL - 500;
 

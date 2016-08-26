@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Demo: jquery-focus-exit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            header {
+                border-bottom: 1px solid #eee;
+            }
+            .test {
+                border: 1px dotted #333;
+                margin: 20px 0;
+                padding: 10px;
+            }
+            .focusin {
+                background-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Demo: jquery-focus-exit</h1>
+            <p>The dotted border marks the confines of the widget. Background will be grey whilst focus remains on or inside widget.</p>
+            <p>Open developer console to view debug output.</p>
+        </header>
+        <div role="main">
+            <h2>Test Area</h2>
+
+            <input placeholder="input before widget">
+            <p>text before widget</p>
+
+            <div class="test" tabindex="0">
+                <input placeholder="input inside widget">
+                <span>text inside widget</span>
+                <input placeholder="input inside widget">
+            </div>
+
+            <p>text after widget</p>
+        </div>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+        <script src="jquery.focusexit.js"></script>
+        <script>
+            $(function() {
+                $textarea = $('textarea');
+                $('.test').one('focusin', function(e) {
+                    $(this).addClass('focusin');
+                });
+
+                $('.test').focusExit().on('focusExit', function(e, data) {
+                    console.log(e, data);
+                    $(this).removeClass('focusin');
+                    $('.test').one('focusin', function(e) {
+                        $(this).addClass('focusin');
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
