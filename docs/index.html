@@ -38,9 +38,7 @@
             <p>text after widget</p>
         </div>
 
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
-        <script src="jquery.focusexit.js"></script>
+        <script src="browser.js"></script>
         <script>
             $(function() {
                 $textarea = $('textarea');
@@ -48,7 +46,7 @@
                     $(this).addClass('focusin');
                 });
 
-                $('.test').focusExit().on('focusExit', function(e, data) {
+                $('.test').focusExit({debug: true}).on('focusExit', function(e, data) {
                     console.log(e, data);
                     $(this).removeClass('focusin');
                     $('.test').one('focusin', function(e) {
