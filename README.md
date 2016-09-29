@@ -27,30 +27,23 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must 
 
 ## Install
 
-<strike>
-```
-npm install @ebay/jquery-focus-exit
-```
-</strike>
-
 ```js
 npm install jquery-focus-exit
 ```
 
-**NOTE: The @ebay package scope is no longer supported. In order to receive latest NPM updates, please use the non-scoped version of this package.**
-
 ## Development
 
-Run `npm start` for test driven development. All tests are located in `test.js`.
+Run `npm start` to run the demo page using browser-sync. Run `npm run tdd` for test driven development. All tests are located in `test.js`.
 
-Execute `npm run` to view all available CLI scripts:
+Useful NPM scripts:
 
-* `npm start` test driven development: watches code and re-tests after any change
+* `npm start` runs demo page on local server and re-syncs browser on source file change
 * `npm test` runs tests & generates reports (see reports section below)
+* `npm run tdd` test driven development: watches code and re-tests after any change
 * `npm run lint` lints code and reports to jshint.txt
-* `npm run minify` builds minified version of code
 * `npm run build` cleans, lints, tests and minifies (called on `npm prepublish` hook)
-* `npm run clean` deletes all generated test reports and coverage files
+
+Execute `npm run` to view all available CLI scripts.
 
 ## Reports
 
