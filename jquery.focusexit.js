@@ -1,8 +1,10 @@
 /**
 * @file jQuery collection plugin that triggers 'focusExit' event when keyboard focus moves to a non-descendant of widget
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 0.3.0
+* @version 0.3.1
 * @requires jquery
+* @param {Object} [options]
+* @param {string} [options.debug] - print debug output to console (default: false)
 */
 (function($, window, document, undefined) {
     var pluginName = 'jquery-focus-exit';
@@ -14,7 +16,10 @@
     * @fires focusExit - when keyboard focus moves to a non-descendant of widget
     * @return {Object} chainable jQuery class
     */
-    $.fn.focusExit = function focusExit() {
+    $.fn.focusExit = function focusExit(options) {
+        options = $.extend({
+            debug: false
+        }, options);
         return this.each(function onEachCollectionItem() {
             // our root element
             var $widget = $(this);
@@ -67,8 +72,8 @@
                 jQuery.data(this, pluginName, {installed: 'true'});
                 // listen once for focus moving in to widget
                 $widget.one('focusin', onWidgetFocusIn);
-            } else { // log warning if plugin is already installed
-                console.log('warning: {pluginName} is already installed on this element'.replace('{pluginName}', pluginName));
+            } else if (options.debug === true) {
+                console.log('debug: {pluginName} is already installed on {element}'.replace('{pluginName}', pluginName).replace('{element}', this));
             }
         });
     };
