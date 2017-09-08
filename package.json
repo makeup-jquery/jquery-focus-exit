@@ -63,5 +63,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "eslint-config-ebay": "^0.1.5"
   }
 }

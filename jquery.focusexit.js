@@ -59,7 +59,7 @@
 
             function doFocusExit(newFocusElement) {
                 // notify observers
-                $widget.trigger('focusExit', {lostFocus: currentFocusElement, gainedFocus: newFocusElement});
+                $widget.trigger('focusExit', { lostFocus: currentFocusElement, gainedFocus: newFocusElement });
                 // listen once for focus moving back in to widget again
                 $widget.one('focusin', onWidgetFocusIn);
                 // clear the currently focussed element
@@ -69,11 +69,13 @@
             // check plugin is not already installed
             if ($.data(this, pluginName) === undefined) {
                 // mark plugin as installed
-                jQuery.data(this, pluginName, {installed: 'true'});
+                jQuery.data(this, pluginName, { installed: 'true' });
                 // listen once for focus moving in to widget
                 $widget.one('focusin', onWidgetFocusIn);
             } else if (options.debug === true) {
-                console.log('debug: {pluginName} is already installed on {element}'.replace('{pluginName}', pluginName).replace('{element}', this));
+                console.log('debug: {pluginName} is already installed on {element}'
+                    .replace('{pluginName}', pluginName)
+                    .replace('{element}', this));
             }
         });
     };

@@ -1,11 +1,12 @@
-describe("jquery.focusexit.js", function() {
+/* eslint no-undef: 0 */
 
+describe("jquery.focusexit.js", function() {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 750;
 
     var timeoutInterval = jasmine.DEFAULT_TIMEOUT_INTERVAL - 500;
 
     var eventHandlers = {
-        onFocusExit : function(e) {}
+        onFocusExit: function(e) {}
     };
 
     var dom = '<div id="testElement" tabindex="0"><button></button><button></button></div>'
@@ -88,5 +89,4 @@ describe("jquery.focusexit.js", function() {
             done();
         }, timeoutInterval);
     });
-
 });
