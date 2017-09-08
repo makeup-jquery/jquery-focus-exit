@@ -38,8 +38,8 @@
   "devDependencies": {
     "browser-sync": "^2",
     "coveralls": "^2",
-    "eslint": "^3",
-    "eslint-config-google": "~0.6",
+    "eslint": "^4",
+    "eslint-config-google": "~0.9",
     "jasmine-core": "^2",
     "jquery": ">=1.11",
     "jquery-migrate": "^3",
@@ -53,7 +53,7 @@
     "karma-phantomjs-launcher": "^1",
     "lasso-cli": "^2",
     "onchange": "^3",
-    "parallelshell": "^2",
+    "parallelshell": "^3",
     "phantomjs-prebuilt": "^2",
     "pre-commit": "^1",
     "rimraf": "^2"
