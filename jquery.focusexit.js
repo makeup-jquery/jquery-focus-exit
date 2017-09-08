@@ -1,7 +1,7 @@
 /**
 * @file jQuery collection plugin that triggers 'focusExit' event when keyboard focus moves to a non-descendant of widget
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 0.3.1
+* @version 1.0.0
 * @requires jquery
 * @param {Object} [options]
 * @param {string} [options.debug] - print debug output to console (default: false)
