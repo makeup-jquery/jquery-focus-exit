@@ -19,10 +19,6 @@
   },
   "pre-commit": "prepublish",
   "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
-  "homepage": "https://github.com/ianmcburnie/jquery-focus-exit",
-  "bugs": {
-    "url": "https://github.com/ianmcburnie/jquery-focus-exit/issues"
-  },
   "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
@@ -32,14 +28,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ianmcburnie/jquery-focus-exit.git"
+    "url": "https://github.com/makeup-jquery/jquery-focus-exit.git"
   },
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2",
-    "coveralls": "^2",
+    "coveralls": "^3",
     "eslint": "^4",
-    "eslint-config-google": "~0.9",
+    "eslint-config-ebay": "~0.1",
     "jasmine-core": "^2",
     "jquery": ">=1.11",
     "jsdoc": "^3",
@@ -62,8 +58,5 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  },
-  "dependencies": {
-    "eslint-config-ebay": "^0.1.5"
   }
 }

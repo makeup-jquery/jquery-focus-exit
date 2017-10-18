@@ -1,7 +1,7 @@
 /**
 * @file jQuery collection plugin that triggers 'focusExit' event when keyboard focus moves to a non-descendant of widget
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 1.0.0
+* @version 1.0.1
 * @requires jquery
 * @param {Object} [options]
 * @param {string} [options.debug] - print debug output to console (default: false)
@@ -30,14 +30,14 @@
             // cache the window node
             var $window = $(window);
 
-            function onWidgetFocusIn(e) {
+            function onWidgetFocusIn() {
                 // listen once for focus moving to anywhere in document
                 $document.one('focusin', onDocumentFocusIn);
                 // listen once for focus leaving the window (clearing any existing listener first)
                 $window.off('blur', onWindowBlur).one('blur', onWindowBlur);
             }
 
-            function onWindowBlur(e) {
+            function onWindowBlur() {
                 // focus has left the window
                 doFocusExit(undefined);
             }

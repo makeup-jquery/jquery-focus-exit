@@ -1,10 +1,10 @@
 # jquery-focus-exit
 
 <p>
-    <a href="https://travis-ci.org/ianmcburnie/jquery-focus-exit"><img src="https://api.travis-ci.org/ianmcburnie/jquery-focus-exit.svg?branch=master" alt="Build Status" /></a>
-    <a href='https://coveralls.io/github/ianmcburnie/jquery-focus-exit?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-focus-exit/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
-    <a href="https://david-dm.org/ianmcburnie/jquery-focus-exit"><img src="https://david-dm.org/ianmcburnie/jquery-focus-exit.svg" alt="Dependency status" /></a>
-    <a href="https://david-dm.org/ianmcburnie/jquery-focus-exit#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-focus-exit/dev-status.svg" alt="devDependency status" /></a>
+    <a href="https://travis-ci.org/makeup-jquery/jquery-focus-exit"><img src="https://api.travis-ci.org/makeup-jquery/jquery-focus-exit.svg?branch=master" alt="Build Status" /></a>
+    <a href='https://coveralls.io/github/makeup-jquery/jquery-focus-exit?branch=master'><img src='https://coveralls.io/repos/makeup-jquery/jquery-focus-exit/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+    <a href="https://david-dm.org/makeup-jquery/jquery-focus-exit"><img src="https://david-dm.org/makeup-jquery/jquery-focus-exit.svg" alt="Dependency status" /></a>
+    <a href="https://david-dm.org/makeup-jquery/jquery-focus-exit#info=devDependencies"><img src="https://david-dm.org/makeup-jquery/jquery-focus-exit/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
 Triggers 'focusExit' event when keyboard focus moves to a non-descendant of widget. This type of behaviour is especially desirable for non-modal overlays.
@@ -51,8 +51,8 @@ Each test run will generate the following reports:
 
 ## CI Build
 
-https://travis-ci.org/ianmcburnie/jquery-focus-exit
+https://travis-ci.org/makeup-jquery/jquery-focus-exit
 
 ## Code Coverage
 
-https://coveralls.io/github/ianmcburnie/jquery-focus-exit?branch=master
+https://coveralls.io/github/makeup-jquery/jquery-focus-exit?branch=master
