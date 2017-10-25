@@ -7,6 +7,8 @@
     <a href="https://david-dm.org/makeup-jquery/jquery-focus-exit#info=devDependencies"><img src="https://david-dm.org/makeup-jquery/jquery-focus-exit/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
+**ATTENTION:** A non-jQuery version is now available at [makeup-focus-exit-emitter](https://github.com/makeup-js/makeup-focus-exit-emitter).
+
 Triggers 'focusExit' event when keyboard focus moves to a non-descendant of widget. This type of behaviour is especially desirable for non-modal overlays.
 
 JavaScript's native 'focusout' event fires when any descendant of a given element loses keyboard focus, even if another descendant immediately gains focus. This type of behaviour is not desirable for non-modal overlays.
